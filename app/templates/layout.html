@@ -1,0 +1,36 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TutorialHero</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'site.css' %}" />
+    <script src="{% static 'script.js' %}"></script>
+</head>
+<body>
+<div class="navbar" id="myNav">
+ <a href="/"  class="active" >TutorialHero</a>
+  <div class="dropdown">
+   <button class="dropbtn">
+    PYTHON
+    <i class="fa fa-caret-down"></i>
+   </button>
+   
+   <div class="dropdown-content">
+    <a href="{% url 'python3' %}">Python3</a>
+    <a href="">Numpy</a>
+    <a href="">Pandas</a>
+    </div>
+   </div>
+ <a href="">HTML</a>
+ <a href="">CSS</a>
+ <a href="">C</a>
+ <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+{% block content %}
+{% endblock %}
+</body>
+</html>

@@ -102,3 +102,9 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+#text backup files
+*.bak
+
+#database
+*.sqlite3
