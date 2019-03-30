@@ -106,6 +106,7 @@ body {
     }
     #image{
       size: 400px;
+      margin-left: 0%;
     }
     .navbar a.icon {
       float: right;
