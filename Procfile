@@ -1,1 +1,1 @@
-we: gunicorn tutorialhero.wsgi
+web: gunicorn tutorialhero.wsgi
