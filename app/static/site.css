@@ -1,5 +1,6 @@
 body {
     margin:0;
+    background-color:whitesmoke;
   }
   
   .navbar {
@@ -67,7 +68,8 @@ body {
     margin-bottom:0%;
     padding:1px 16px;
     height:100%;
-    background-color:whitesmoke;
+    background-color:rgba(255, 250, 250, 0.932);
+    border-radius: 25px;
   }
   .dropdown-content a:hover {
     background-color: rgba(247, 154, 154, 0.589);
