@@ -76,7 +76,19 @@ body {
   .dropdown:hover .dropdown-content {
     display: block;
   }
-
+ 
+#btnlink{
+  border: none;
+  background-color: cadetblue;
+  color:white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
   @media screen and (max-width: 600px) {
     .navbar a:not(:first-child), .dropdown .dropbtn {
       display: none;
@@ -85,21 +97,9 @@ body {
       float: right;
       display: block;
     }
+   
   }
-  #btn{
-      border: none;
-      background-color: cadetblue;
-      color:white;
-      height: 40px;
-      width:25%;
-  }
-  #btnlink{
-    border: none;
-    background-color: cadetblue;
-    color:white;
-    height: 40px;
-    width:10%;
-}
+ 
   @media screen and (max-width: 600px) {
     .navbar{
        background-color:  rgb(190, 10, 10);
