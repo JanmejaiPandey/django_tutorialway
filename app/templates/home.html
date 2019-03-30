@@ -1,1 +1,18 @@
 {% extends "layout.html" %}
+{% load staticfiles %}
+{% block content %}
+<font size="5">
+<h1 style="margin-left:12%;color:red">
+TutorialHero
+</h1>
+<article id=ar>
+    This site contains tutorial that are provided by Janmejai Pandey,Founder of TutorialHero and its developer.
+    <br>
+    This site is made for the purpose of learning and teaching. 
+</article>
+<br>
+<h3 style="margin-left:12%;color:red">Tutorials:</h3>
+<a style="margin-left: 12%;" href="{% url 'python3' %}"><button id="btnlink">python3</button></a></li>
+
+</font>
+{% endblock %}
