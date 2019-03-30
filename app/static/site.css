@@ -76,7 +76,9 @@ body {
   .dropdown:hover .dropdown-content {
     display: block;
   }
- 
+ #f{
+   font-size: 30px;
+ }
 #btnlink{
   border: none;
   background-color: cadetblue;
@@ -92,6 +94,9 @@ body {
   @media screen and (max-width: 600px) {
     .navbar a:not(:first-child), .dropdown .dropbtn {
       display: none;
+    }
+    #f{
+      font-size: 15px;
     }
     .navbar a.icon {
       float: right;
