@@ -110,6 +110,9 @@ body {
     #f{
       font-size: 15px;
     }
+    #ar{
+      margin-bottom:10%;
+    }
     .navbar a.icon {
       float: right;
       display: block;
