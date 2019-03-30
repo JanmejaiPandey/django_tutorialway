@@ -95,7 +95,6 @@ body {
 }
 #image{
   margin-left: 12%;
-
 }
   @media screen and (max-width: 600px) {
     .navbar a:not(:first-child), .dropdown .dropbtn {
@@ -103,10 +102,6 @@ body {
     }
     #f{
       font-size: 15px;
-    }
-    #image{
-      size: 400px;
-      margin-left: 0%;
     }
     .navbar a.icon {
       float: right;
