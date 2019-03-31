@@ -12,3 +12,9 @@ def home(request):
         request,
         'home.html',
     )
+
+def html(request):
+    return render(
+        request,
+        'html.html',
+    )
