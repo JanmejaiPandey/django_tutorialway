@@ -2,7 +2,20 @@ body {
     margin:0;
     background-color:whitesmoke;
   }
-  
+ 
+  * {
+    box-sizing: border-box;
+  }
+  .column {
+    float: left;
+    width: 50%;
+    padding: 5px;
+  }
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
   .navbar {
     overflow: hidden;
     background-color:#f9f9f9;
@@ -125,7 +138,16 @@ body {
       float: right;
       display: block;
     }
-   
+    .column {
+      float: none;
+    }
+    #im{
+     width:400px;
+
+    }
+    .row::after{
+      display: none;
+    }
   }
  
   @media screen and (max-width: 600px) {
