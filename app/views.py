@@ -18,3 +18,9 @@ def html(request):
         request,
         'html.html',
     )
+
+def about(request):
+    return render(
+        request,
+        'about.html',
+    )

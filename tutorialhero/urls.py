@@ -20,6 +20,7 @@ from app import views
 urlpatterns = [
     path('',views.home,name="home"),
     path('python3/',views.python3,name='python3'),
-    path('HTML/',views.html,name="html"),
+    path('html/',views.html,name="html"),
+    path('about/',views.about,name="about"),
     path('admin/', admin.site.urls),
 ]
