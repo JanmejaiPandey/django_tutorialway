@@ -17,8 +17,10 @@ body {
     display: table;
   }
   .navbar {
+    z-index: 999;
     overflow: hidden;
     background-color:#f9f9f9;
+    box-shadow: 0 4px 10px -6px #000;
   }
     #foot {
     position: relative;
@@ -40,8 +42,12 @@ body {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    border-right: 2px solid darkred;
   }
-  
+  #b,#g{
+    border-bottom: 2px solid darkred;    
+    border-right: none;
+  }
   .dropdown {
     float: left;
     overflow: hidden;
@@ -59,9 +65,29 @@ body {
   }
   
   .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
+    background-color: rgba(0,0,0,0.2);
+    border-left: 2px solid darkred;
+    border-right:none;
+    color:white;
   }
-  
+  #b:hover,#g:hover{
+    border-top: 2px solid darkred;
+    border-bottom:none;
+    border-left:none;    
+    color:white;
+  }
+  #m{
+    background-color: darkred;
+    border-right: none;
+    border-top: none;
+    border-bottom: 2px solid darkred;
+  }
+  #m:hover{
+    background-color: red;
+    border-top: 2px solid darkred;
+    border-bottom:none;
+    border-left:none;    
+  }  
   .dropdown-content {
     display: none;
     position: absolute;
@@ -147,6 +173,18 @@ body {
     }
     .row::after{
       display: none;
+    }
+    .navbar a{
+      border-left:none;
+    }
+    #b{
+      border-left: 2px solid darkred;
+      border-bottom: none;
+    }
+    #b:hover{
+      border-top: none;
+      border-left: none;
+      border-right: 2px solid darkred;
     }
   }
  

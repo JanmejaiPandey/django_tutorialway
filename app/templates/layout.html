@@ -14,22 +14,26 @@
 </head>
 <body>
 <div class="navbar" id="myNav">
- <a href="{% url 'home' %}"  class="active" >TutorialHero</a>
+ <a href="{% url 'home' %}" id="m" class="active" >TutorialHero</a>
   <div class="dropdown">
-   <button class="dropbtn">
+   <button id="b" class="dropbtn" >
     PYTHON
     <i class="fa fa-caret-down"></i>
    </button>
    
    <div class="dropdown-content">
     <a href="{% url 'python3' %}">Python3</a>
+    <hr style="width:65%">
     <a href="">Numpy</a>
+    <hr style="width:65%">
     <a href="">Pandas</a>
     </div>
    </div>
- <a href="{% url 'html' %}">HTML</a>
- <a href="">CSS</a>
- <a href="">C</a>
+ <a id="b"  href="{% url 'html' %}">HTML</a>
+ <a id="b" href="" >CSS</a>
+ <a id="b" href="" >C</a>
+ <a id="g" href="" style=" float:right;">SignIn</a>
+ <a id="g" href="" style="float:right;">SignUp</a>
  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 {% block content %}
