@@ -148,7 +148,7 @@ body {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  box-shadow: 0 2px 8px -4px blue;
+  box-shadow: 0 2px 8px -3px blue;
   margin: 4px 2px;
   cursor: pointer;
 }
@@ -189,6 +189,9 @@ body {
       border-top: none;
       border-left: none;
       border-right: 2px solid darkred;
+    }
+    #image{
+      width:50px;
     }
   }
  
