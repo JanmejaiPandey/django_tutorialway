@@ -22,5 +22,11 @@ urlpatterns = [
     path('python3/',views.python3,name='python3'),
     path('html/',views.html,name="html"),
     path('about/',views.about,name="about"),
+    path('c/',views.c,name="c"),
+    path('numpy/',views.numpy,name="numpy"),
+    path('pandas/',views.pandas,name="pandas"),
+    path('css/',views.css,name="css"),
+    path('signin/',views.signin,name="signin"),
+    path('signup/',views.signup,name="signup"),
     path('admin/', admin.site.urls),
 ]

@@ -22,13 +22,19 @@ body {
     background-color:#f9f9f9;
     box-shadow: 0 4px 10px -6px #000;
   }
-    #foot {
+  #page-container {
     position: relative;
-    margin-bottom: 0;
-    margin-left:0;
-    margin-top: 0;
+    min-height: 100vh;
+  }
+  
+  #content-wrap {
+    padding-bottom: 2.5rem;    /* Footer height */
+  }
+    #foot {
+    position: absolute;
+    bottom: 0;
+    width: 100%;  
     box-shadow: 0 2px 8px -1px black;
-    width: 100%;
     background-color: grey;
     }
   .navbar a.active{
@@ -66,7 +72,7 @@ body {
   }
   
   .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: rgba(0,0,0,0.2);
+    background-color: #b180808a;
     border-left: 2px solid darkred;
     border-right:none;
     color:white;
@@ -191,7 +197,7 @@ body {
       border-right: 2px solid darkred;
     }
     #image{
-      width:50px;
+      width:100px;
     }
   }
  

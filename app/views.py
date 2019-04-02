@@ -24,3 +24,39 @@ def about(request):
         request,
         'about.html',
     )
+def signin(request):
+    return render(
+        request,
+        'signin.html',
+    )
+
+def signup(request):
+    return render(
+        request,
+        'signup.html',
+    )
+
+
+def c(request):
+    return render(
+        request,
+        'c.html',
+    )
+
+def css(request):
+    return render(
+        request,
+        'CSS.html',
+    )
+
+def numpy(request):
+    return render(
+        request,
+        'numpy.html',
+    )
+def pandas(request):
+    return render(
+        request,
+        'pandas.html',
+    )
+
