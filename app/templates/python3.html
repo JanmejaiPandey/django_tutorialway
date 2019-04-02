@@ -1,12 +1,13 @@
 {% extends "layout.html" %}
 {% load staticfiles %}
 {% block content %}  
-<font id="f">
-<h2 style="margin-left:12%;color:red ;">
+<font style="margin-bottom: 4%" id="f">
+<article style="margin-top: 5%" id="ar">
+<h2 style="color:red ;">
    Python3 Tutorial
 </h2>
 
-<article id="ar">
+
    In this tutorial we are going to cover basic python.
    From absolute beginner who doesn't know how to write code.
    So don't worry we are going to cover from very basic to advanced.
@@ -14,12 +15,11 @@
    <br>
    After completion of this tutorial you will be able code from zero to hero.
 </article>
-
-<h3 style="margin-left:12%;color:rgba(255, 51, 0, 0.932)">
+   <article id="ar">
+ <h3 style="color:rgba(255, 51, 0, 0.932)">
    What is Python?
-</h3>
+ </h3>
 
-<article id="ar">
       <img align="left" src="{% static 'images/python3.png' %}" >
    Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. 
   <br>
@@ -36,10 +36,11 @@
      </button>
  </a>
 </article>
-<h3 style="margin-left:12%;color:rgba(255, 51, 0, 0.932)">
-   Installing Python
-</h3>
 <article id="ar">
+ <h3 style="color:rgba(255, 51, 0, 0.932)">
+   Installing Python
+ </h3>
+ 
  For installing Python into your system .you have to download the intaller from official site.
  <br>
  Click on Download Python button to goto official page for downloading.
@@ -48,21 +49,21 @@
    <button id="btnlink">
       Download Python
     </button>
-</a>
-</article>
-<h4 style="margin-left:12%;color:rgba(255, 51, 0, 0.932)">
-   How to install Python?
-</h4>
-<article id="ar">
-Click the Download Button above.
-</article>
-<div class="row">
+ </a>
+
+ <h4 style="color:rgba(255, 51, 0, 0.932)">
+   How to install Python? 
+ </h4>
+ Click the Download Button above.
+
+ <div class="row">
    <div class="column">
-<img id="im" style="margin-left: 12%;border:5px solid red;" src="{% static 'images/download_link.png' %}" >
+ <img id="im" style="border:5px solid red;" src="{% static 'images/download_link.png' %}" >
    </div>
-<div class="column">
-<img id="im" style="margin-left: 12%;border:5px solid red;" src="{% static 'images/download.png' %}" >
-</div>
-</div>
+ <div class="column">
+ <img id="im" style="border:5px solid red;" src="{% static 'images/download.png' %}" >
+ </div>
+ </div>
+</article>
 </font>
 {% endblock %}
