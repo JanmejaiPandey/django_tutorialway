@@ -1,5 +1,15 @@
 from django.shortcuts import render
 from django.http import request
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.forms import UserCreationForm
+from django.urls import reverse_lazy
+from django.views import generic
+
+
+class SignUp(generic.CreateView):
+    form_class = UserCreationForm
+    success_url = reverse_lazy('login')
+    template_name = 'signup.html'
 
 def python3(request):
     return render(
@@ -12,7 +22,7 @@ def home(request):
         request,
         'home.html',
     )
-
+@login_required
 def html(request):
     return render(
         request,
@@ -24,16 +34,17 @@ def about(request):
         request,
         'about.html',
     )
-def signin(request):
+
+def login(request):
     return render(
         request,
-        'signin.html',
+        'login.html',
     )
 
-def signup(request):
+def logout(request):
     return render(
         request,
-        'signup.html',
+        'logout.html',
     )
 
 
