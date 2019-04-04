@@ -37,7 +37,7 @@ $(document).ready(function(){
 setInterval(function() {
 $("link[rel='icon']").remove();
 /*$("link[rel='shortcut icon']").remove();*/
-$("head").append('<link rel="icon" type="image/png" sizes="16x16" href="'+favicon_images[image_counter]+'" >');
+$("head").append('<link rel="icon" type="image/png" sizes="16x16" href="'+favicon_images[image_counter]+'" />');
 
 // If last image then goto first image
 // Else go to next image    
@@ -62,7 +62,7 @@ $(document).ready(function(){
 setInterval(function() {
 /*$("link[rel='icon']").remove();*/
 $("link[rel='shortcut icon']").remove();
-$("head").append('<link rel="icon" type="image/ico" href="'+favicon_images_icon[image_counter]+'" >');
+$("head").append('<link rel="icon" type="image/ico" href="'+favicon_images_icon[image_counter]+'" />');
 
 // If last image then goto first image
 // Else go to next image    
