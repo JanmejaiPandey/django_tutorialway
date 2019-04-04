@@ -160,9 +160,9 @@ body {
     background-color: rgba(247, 154, 154, 0.589);
   }
   
-  .dropdown:hover .dropdown-content {
+ /* .dropdown:hover .dropdown-content {
     display: block;
-  }
+  }*/
  #f{
    font-size: 30px;
    color:grey;
@@ -273,7 +273,7 @@ body {
      top: 0;
    }
 
-   .navbar.responsive .icon:focus-within .dropdown,
+   /*.navbar.responsive .icon:focus-within .dropdown,
    .navbar.responsive .icon:focus .dropdown,
    .navbar.responsive .icon:hover .dropdown{
     visibility: visible;
@@ -281,7 +281,7 @@ body {
     z-index: 1;
     transform: translateY(0%);
     transition-delay: 0s, 0s, 0.3s;
-   }
+   }*/
    .navbar.responsive a {
      float: none;
      display: block;
