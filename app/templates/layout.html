@@ -7,7 +7,6 @@
     <title>Become Zero to Hero in Coding:TutotrialHero</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" />
-    <link rel="icon" type="image/png" sizes="32x32" href="{%static 'images/favicon-32x32.png'%}">
     <link rel="icon" type="image/png" sizes="16x16" href="{%static 'images/favicon-16x16.png'%}">
     <link rel="stylesheet" type="text/css" href="{% static 'site.css' %}" />
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
@@ -19,9 +18,7 @@
   <div class="dropdown">
    <button id="b" class="dropbtn" >
     PYTHON
-    <i class="fa fa-caret-down"></i>
    </button>
-   
    <div class="dropdown-content">
     <a href="{% url 'python3' %}">Python3</a>
     <hr style="width:65%">
@@ -33,7 +30,7 @@
    <a id="b" href="{% url 'c' %}" >C</a>
    <a id="b"  href="{% url 'html' %}">HTML</a>
  <a id="b" href="{% url 'css' %}" >CSS</a>
- <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+ <a href="" style="font-size:17px;" class="icon" >&#9776;</a>
  {% if user.is_authenticated %}
  <a id="g" href="{% url 'logout' %}" style="float:right;">LogOut</a>
  <font size=4 style="float:right;margin-top: 1%;"> Hi {{ user.username }}!</font>
