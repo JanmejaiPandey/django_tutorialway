@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" />
     <link rel="icon" type="image/png" sizes="16x16" href="{%static 'images/favicon-16x16.png'%}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'site.css' %}" />
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="{% static 'jquery-3.3.1.min.js' %}"></script>
     <script src="{% static 'script.js' %}"></script>
 </head>
 <body>
@@ -20,10 +20,10 @@
     PYTHON
    </button>
    <div class="dropdown-content">
-    <a class="anim" href="{% url 'python3' %}">Python3</a>
-    <hr style="width:65%">
+    <a href="{% url 'python3' %}">Python3</a>
+   <br>
     <a href="{% url 'numpy' %}">Numpy</a>
-    <hr style="width:65%">
+   <br>
     <a  href="{% url 'pandas' %}">Pandas</a>
     </div>
    </div>
@@ -41,7 +41,7 @@
  
 </div>
 <div id="page-container">
-<div class="content" id="content-wrap">
+<div id="content-wrap">
 {% block content %}
 {% endblock %}
 </div>

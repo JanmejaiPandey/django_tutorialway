@@ -11,10 +11,7 @@ $(document).ready(function(){
   $(".dropdown").click(function(){
     $(".dropdown-content").toggle(600);
   });
-  $(".dropdown").hover(function(){
-    $(".dropdown-content").show(500);
-  },
-  function(){
+  $(".dropdown").mouseleave(function(){
     $(".dropdown-content").hide(600);
   });
   updateImageSize();
