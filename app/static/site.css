@@ -8,14 +8,19 @@ body {
   }
   
   .navbar {
-    z-index: 999;
+    position: fixed;
+    top: 0;
+    width: 100%;
     overflow: hidden;
     background-color:#f9f9f9;
     box-shadow: 0 4px 10px -6px #000;
+    z-index:1; 
   }
+  
   #page-container {
     position: relative;
     min-height: 100vh;
+
   }
   
   #content-wrap {
@@ -209,13 +214,16 @@ body {
   border-radius: 20px;
 }
 #im{
-  margin-left: 20%;
+  margin-left: 25%;
   border:5px solid red;
 }
   @media screen and (max-width: 600px) {
    
     .navbar a:not(:first-child), .dropdown .dropbtn {
       display: none;
+    }
+    #page-container{
+      margin-top: 15%;
     }
     #f{
       font-size: 15px;

@@ -6,6 +6,7 @@ function myFunction() {
     x.className = "navbar";
   }
 }
+
 $(document).ready(function(){
   $(".dropdown").click(function(){
     $(".dropdown-content").toggle(600);
@@ -20,6 +21,7 @@ $(document).ready(function(){
     $(window).resize(function() {
         updateImageSize();
     });
+    
 });
 var favicon_images = [
   'static/images/favicon-16x16.png',
@@ -68,12 +70,14 @@ image_counter++;
 }, 200);
 });
 
-window.onscroll = function() {myFunction()};
+window.onscroll = function() {sFunction()};
+
 var navbar = document.getElementById("myNav");
 var sticky = navbar.offsetTop;
-function myFunction() {
+
+function sFunction() {
   if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
+    navbar.classList.add("sticky");
   } else {
     navbar.classList.remove("sticky");
   }
@@ -81,7 +85,7 @@ function myFunction() {
 function updateImageSize() {
   $(".column").each(function(){
       var ratio_cont = jQuery(this).width();
-      w=60*(ratio_cont)/100;
+      w=50*(ratio_cont)/100;
       var $img = jQuery(this).find("img");
       var ratio_img = $img.width();
       if (ratio_cont > ratio_img)
