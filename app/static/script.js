@@ -7,21 +7,19 @@ function myFunction() {
   }
 }
 $(document).ready(function(){
+  $(".dropdown").click(function(){
+    $(".dropdown-content").toggle(600);
+  });
   $(".dropdown").hover(function(){
     $(".dropdown-content").show(500);
   },
   function(){
     $(".dropdown-content").hide(600);
   });
-  $(".navbar.responsive a.icon").click(function(){
-    alert("gdgd");
-    $(".navbar responsive").slideToggle(1000);
-    $(".navbar responsive a").slideToggle(1000); 
-    $(".navbar responsive .dropdown").slideToggle(1000); 
-  });
-  $(".navbar responsive .dropdown").click(function(){
-     $(".navbar responsive .dropdown-content").toggle(10000);
-  });
+  updateImageSize();
+    $(window).resize(function() {
+        updateImageSize();
+    });
 });
 var favicon_images = [
   'static/images/favicon-16x16.png',
@@ -62,13 +60,37 @@ $(document).ready(function(){
 setInterval(function() {
 /*$("link[rel='icon']").remove();*/
 $("link[rel='shortcut icon']").remove();
-$("head").append('<link rel="icon" type="image/ico" href="'+favicon_images_icon[image_counter]+'" />');
-
-// If last image then goto first image
-// Else go to next image    
+$("head").append('<link rel="icon" type="image/ico" href="'+favicon_images_icon[image_counter]+'" />');  
 if(image_counter == favicon_images.length -1)
 image_counter = 0;
 else
 image_counter++;
 }, 200);
 });
+
+window.onscroll = function() {myFunction()};
+var navbar = document.getElementById("myNav");
+var sticky = navbar.offsetTop;
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+function updateImageSize() {
+  $(".column").each(function(){
+      var ratio_cont = jQuery(this).width();
+      w=60*(ratio_cont)/100;
+      var $img = jQuery(this).find("img");
+      var ratio_img = $img.width();
+      if (ratio_cont > ratio_img)
+      {
+          $img.css({"width": w, "height": "auto"});
+      }
+      else if (ratio_cont < ratio_img)
+      {
+          $img.css({"width": w, "height": "auto"});
+      }
+  });
+}

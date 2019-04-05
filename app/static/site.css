@@ -6,16 +6,7 @@ body {
   * {
     box-sizing: border-box;
   }
-  .column {
-    float: left;
-    width: 50%;
-    padding: 5px;
-  }
-  .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
+  
   .navbar {
     z-index: 999;
     overflow: hidden;
@@ -88,6 +79,7 @@ body {
     border-right: none;
     border-top: none;
     border-bottom: 2px solid darkred;
+    
   }
   #m:hover{
     background-color: red;
@@ -216,7 +208,10 @@ body {
   background-color: red;
   border-radius: 20px;
 }
-
+#im{
+  margin-left: 20%;
+  border:5px solid red;
+}
   @media screen and (max-width: 600px) {
    
     .navbar a:not(:first-child), .dropdown .dropbtn {
@@ -231,13 +226,6 @@ body {
     .navbar a.icon {
       float: right;
       display: block;
-    }
-    .column {
-      float: none;
-    }
-    #im{
-     width:250px;
-
     }
     .row::after{
       display: none;
