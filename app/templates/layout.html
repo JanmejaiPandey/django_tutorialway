@@ -13,8 +13,10 @@
     <script src="{% static 'script.js' %}"></script>
 </head>
 <body>
-<div class="navbar" id="myNav">
- <a href="{% url 'home' %}" id="m" class="active" >TutorialHero</a>
+  <div class="header">
+    <a href="{% url 'home' %}"id="m"><font size=7>TutorialHero</font></a>
+  </div>
+    <div class="navbar" id="myNav">
   <div class="dropdown">
    <button id="b" class="dropbtn" >
     PYTHON
@@ -27,9 +29,9 @@
     <a  href="{% url 'pandas' %}">Pandas</a>
     </div>
    </div>
-   <a id="b" href="{% url 'c' %}" >C</a>
-   <a id="b"  href="{% url 'html' %}">HTML</a>
- <a id="b" href="{% url 'css' %}" >CSS</a>
+   <a id="b" class="navbarc" href="{% url 'c' %}" >C</a>
+   <a id="b" class="navbarc"  href="{% url 'html' %}">HTML</a>
+ <a id="b" class="navbarc" href="{% url 'css' %}" >CSS</a>
  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
  {% if user.is_authenticated %}
  <a id="g" href="{% url 'logout' %}" style="float:right;">LogOut</a>

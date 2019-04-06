@@ -8,14 +8,31 @@ body {
   }
   
   .navbar { 
-    position: fixed;
-    top: 0;
-    width: 100%;
+    
     overflow: hidden;
     background-color:#f9f9f9;
     box-shadow: 0 4px 10px -6px #000;
     z-index: 1;
   }
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  .header {
+    background-color: #f1f1f1;
+    padding: 30px;
+    text-align: center;
+    background-image: url('images/back3.jpg');
+    background-size: cover;
+  }
+  #m:hover{
+    background-color: red;
+    color: azure;
+    border-top: 2px solid darkred;
+    border-bottom:none;
+    border-left:none;    
+  } 
   
   #page-container {
     position: relative;
@@ -32,9 +49,13 @@ body {
     box-shadow: 0 2px 8px -1px black;
     background-color: grey;
     }
-  .navbar a.active{
-      color:white;
-      background-color: rgb(190, 10, 10);
+  .active{
+      color:black;
+      border-right:1px solid darkred ;
+      border-left: 1px solid darkred;
+      border-top: 1px solid darkred;
+      border-bottom: 1px solid darkred;
+      border: 1px solid darkred;
   }
   
   .navbar a {
@@ -78,19 +99,7 @@ body {
     border-left:none;    
     color:white;
   }
-  #m{
-    background-color: darkred;
-    border-right: none;
-    border-top: none;
-    border-bottom: 2px solid darkred;
-    
-  }
-  #m:hover{
-    background-color: red;
-    border-top: 2px solid darkred;
-    border-bottom:none;
-    border-left:none;    
-  }  
+  
   .dropdown-content {
     display: none;
     position: fixed;
