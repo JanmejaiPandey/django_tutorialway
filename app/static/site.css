@@ -263,9 +263,6 @@ body {
   }
  
   @media screen and (max-width:600px){
-    .navbar{
-      background-color:  rgb(190, 10, 10);
-     }
    .navbar.responsive {
        position: relative;
        background-color: whitesmoke;
