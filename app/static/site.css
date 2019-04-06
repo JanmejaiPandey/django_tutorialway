@@ -23,14 +23,17 @@ body {
     padding: 30px;
     text-align: center;
     background-color: #f9f9f9;
+    
   }
   #h{
-    background-color:#f9f9f9;
-    border: none;
+    
     color: darkred;
     cursor: pointer;    
     font-family:"Comic Sans MS";
   } 
+  #m{
+    border: 1px solid darkred;
+  }
   
   #page-container {
     position: relative;
