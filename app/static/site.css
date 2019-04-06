@@ -20,18 +20,16 @@ body {
     width: 100%;
   }
   .header {
-    background-color: #f1f1f1;
     padding: 30px;
     text-align: center;
-    background-image: url('images/back3.jpg');
-    background-size: cover;
+    background-color: #f9f9f9;
   }
-  #m:hover{
-    background-color: red;
-    color: azure;
-    border-top: 2px solid darkred;
-    border-bottom:none;
-    border-left:none;    
+  #h{
+    background-color:#f9f9f9;
+    border: none;
+    color: darkred;
+    cursor: pointer;    
+    font-family:"Comic Sans MS";
   } 
   
   #page-container {
