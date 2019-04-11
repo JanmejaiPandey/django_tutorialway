@@ -295,6 +295,8 @@ body {
   @media screen and (max-width: 600px) {
 
     .loginform{
+      margin-left: 10%;
+      margin-right: 1%;
       width:80%;
     }  
     .navbar a:not(:first-child), .dropdown .dropbtn {
