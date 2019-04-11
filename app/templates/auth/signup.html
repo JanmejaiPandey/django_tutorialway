@@ -3,16 +3,20 @@
 {% block title %}Sign Up{% endblock %}
 
 {% block content %}
-<form class="loginform" >
+<article class="loginform" >
   <h2 style="text-align:center;">Sign up</h2>
   <hr>
 <form method="POST">
         {% csrf_token %}
         {{ form }}
         <button type="submit" style="border:none; margin-top: 3%;width:40%;height:40%;background-color:green;color: white;cursor:pointer">Register</button>
-        <a  style="height:70%;width:30%;" href="{% url 'home' %}"><article id = "Cancel"style="width:40%;margin-top: 3%;height:40%;margin-right: 3%;text-align:center;background-color:red;float:right;color: white">Cancel</article></a> 
+        <a  style="height:70%;width:30%;" href="{% url 'home' %}">
+          <article id = "Cancel"style="width:40%;margin-top: 3%;height:40%;margin-right: 3%;text-align:center;background-color:red;float:right;color: white">
+            Cancel
+          </article>
+        </a> 
         <hr>
  By Submitting, you are accepting the <a href="">terms and conditions</a>      
     </form>
-  </form>
+  </article>
 {% endblock %}
