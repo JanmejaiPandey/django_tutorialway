@@ -295,14 +295,10 @@ body {
   @media screen and (max-width: 600px) {
 
     .loginform{
-      margin-left: 1%;
+      margin-left: 3%;
       margin-right: 1%;
       width:80%;
-    }
-    #cancel{
-      float: none;
-    }
-  
+    }  
     .navbar a:not(:first-child), .dropdown .dropbtn {
       display: none;
     }
