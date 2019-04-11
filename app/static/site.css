@@ -296,8 +296,8 @@ body {
 
     .loginform{
       margin-left: 1%;
-      margin-right: 1%
-      
+      margin-right: 1%;
+      width:80%;
     }
     #cancel{
       float: none;
