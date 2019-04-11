@@ -11,8 +11,7 @@ $(document).ready(function(){
 
 window.onscroll = function() {sFunction()};
 var navbar = document.getElementById("myNav");
-var sticky = navbar.offsetTop;
-
+var sticky = navbar.offsetTop; 
 function sFunction() {
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky");
@@ -22,6 +21,9 @@ function sFunction() {
 }
   $(".dropdown").click(function(){
     $(".dropdown-content").toggle(600);
+  });
+  $(".form-control").click(function(){
+      $(this).show(10000);
   });
   $(".dropdown").mouseleave(function(){
     $(".dropdown-content").hide(600);

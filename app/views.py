@@ -1,20 +1,21 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.http import request
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import login,authenticate,get_user_model,logout 
 from django.urls import reverse_lazy
 from django.views import generic
+from .forms import LoginForm,SignUpForm
 
-
-class SignUp(generic.CreateView):
-    form_class = UserCreationForm
-    success_url = reverse_lazy('login')
-    template_name = 'signup.html'
-
+User =get_user_model()
 def python3(request):
+    context = {
+        "title":"PYTHON TUTORIAL"
+    }
     return render(
         request,
         'python3.html',
+        context
     )
 
 def home(request):
@@ -22,7 +23,7 @@ def home(request):
         request,
         'home.html',
     )
-@login_required
+# @login_required
 def html(request):
     return render(
         request,
@@ -35,18 +36,61 @@ def about(request):
         'about.html',
     )
 
-def login(request):
+def login_page(request):
+    form = LoginForm(request.POST or None)
+    print("User LoggedIn is")
+    print(request.user.is_authenticated)
+    context = {
+        "form":form
+    }
+    if form.is_valid():
+        print(form.cleaned_data)
+        username = form.cleaned_data.get("username")
+        password = form.cleaned_data.get("password")
+        #print(request.user.is_authenticated)
+        user = authenticate(request, username=username, password=password)
+        print(user)
+        
+        if user is not None:
+            #print(request.user.is_authenticated)
+            login(request, user)
+            print(request.user.is_authenticated)
+            #context['form'] = LoginForm()
+            return redirect("/")       
+        else:
+            print("Error")
+
     return render(
         request,
-        'login.html',
+        'auth/login.html',
+        context
     )
 
-def logout(request):
+def logout_page(request):
+    
+    return render(
+        logout(request),
+        'auth/logout.html',
+    )
+
+def SignUp_page(request): 
+    form = SignUpForm(request.POST or None)
+    context={
+        "form" : form,
+        "title": "SignUp",
+    }   
+    if form.is_valid():
+        print(form.cleaned_data)
+        username = form.cleaned_data.get("username")
+        email = form.cleaned_data.get("email")
+        password = form.cleaned_data.get("password")
+        new_user = User.objects.create_user(username, email, password)
+        print(new_user)   
     return render(
         request,
-        'logout.html',
-    )
-
+        "auth/signup.html",
+        context
+        )
 
 def c(request):
     return render(

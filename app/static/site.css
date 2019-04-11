@@ -6,9 +6,10 @@ body {
   * {
     box-sizing: border-box;
   }
-  
+  #sname{
+    text-align: center;     
+  }
   .navbar { 
-    
     overflow: hidden;
     background-color:#f9f9f9;
     box-shadow: 0 4px 10px -6px #000;
@@ -22,20 +23,29 @@ body {
   .header {
     padding: 30px;
     text-align: center;
-    background-color: #f9f9f9;
-    
+    background-color: #f9f9f9;  
   }
   #h{
-    
+    text-align: center;
     color: darkred;
     cursor: pointer;    
     font-family:"Comic Sans MS";
   } 
   #m{
-    width: max-content;
-    border: 1px solid darkred;
+    width: 50%;
+    text-align: center;
+    /* border: 1px solid darkred; */
   }
-  
+  .beforeHeader{
+    background-image: url('images/back2.jpg');
+    background-color: greenyellow;
+    width: 100%;
+    height: inherit;
+    padding: 30px;
+    text-align: center;
+    height: 10%;
+    background-size: 100%;
+  }
   #page-container {
     position: relative;
     min-height: 100vh;
@@ -53,19 +63,62 @@ body {
     }
   .active{
       color:black;
-      border-right:1px solid darkred ;
-      border-left: 1px solid darkred;
-      border-top: 1px solid darkred;
-      border-bottom: 1px solid darkred;
-      border: 1px solid darkred;
+      /* border-right:1px solid darkred ; */
+      /* border-left: 1px solid darkred; */
+      /* border-top: 1px solid darkred; */
+      /* border-bottom: 1px solid darkred; */
+      /* border: 1px solid darkred; */
   }
+  .loginform{
+    margin-left: 35%;
+    margin-right: 40%;
+    margin-top: 10%;
+    box-shadow: 0 2px 8px -2px red;
+    width: max-content;
+    height: max-content;
+    padding-bottom: 3%;
+    padding-left: 3%;
+    padding-top: 3%;
+    padding-right: 3%;
+    display: block;
+    border: 1px solid red;
+    background-color: gainsboro
+  }
+  .form-control{
+    display: block;
+    width: max-content;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 2px solid #ced4da;
+    border-radius: .30rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }
+  input {
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+}
   
   .navbar a {
     float: left;
     font-size: 16px;
     color: black;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 16px; 
     text-decoration: none;
     border-right: 2px solid darkred;
   }
@@ -123,6 +176,7 @@ body {
   .navbar .icon {
     display: none;
   }
+  
   #ar{
     margin-left:8%;
     margin-right:8%;
@@ -229,7 +283,8 @@ body {
   border:5px solid red;
 }
   @media screen and (max-width: 600px) {
-   
+
+  
     .navbar a:not(:first-child), .dropdown .dropbtn {
       display: none;
     }
@@ -291,9 +346,12 @@ body {
      display: block;
      text-align: left;
    }
-   .navbar.responsive .dropdown {float: none;
+   .navbar.responsive .dropdown {
+     float: none;
    }
-   .navbar.responsive .dropdown-content {position: relative;}
+   .navbar.responsive .dropdown-content {
+     position: relative;
+    }
    .navbar.responsive .dropdown .dropbtn {
      display: block;
      width: 100%;
