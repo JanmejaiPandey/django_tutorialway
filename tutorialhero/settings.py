@@ -27,7 +27,7 @@ SECRET_KEY = '#haq6&$l=%2tkcsyzbc_p+v$g^$4l=03dr8eg^4x807ajm-85x'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'http://tutorialhero.herokuapp.com/'
+    'tutorialhero.herokuapp.com'
 ]
 
 
