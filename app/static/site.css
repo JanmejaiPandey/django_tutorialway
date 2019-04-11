@@ -84,16 +84,6 @@ body {
     border: 1px solid red;
     background-color: gainsboro
   }
-  #cancel{
-    width:40%;
-    margin-top: 3%;
-    height:40%;
-    margin-right: 3%;
-    text-align:center;
-    background-color:red;
-    float:right;
-    color: white
-  }
   .form-control{
     display: block;
     width: max-content;
