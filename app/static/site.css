@@ -84,6 +84,16 @@ body {
     border: 1px solid red;
     background-color: gainsboro
   }
+  #cancel{
+    width:40%;
+    margin-top: 3%;
+    height:40%;
+    margin-right: 3%;
+    text-align:center;
+    background-color:red;
+    float:right;
+    color: white
+  }
   .form-control{
     display: block;
     width: max-content;
@@ -222,10 +232,10 @@ body {
     background-color: rgba(247, 154, 154, 0.589);
   }
   
- /* .dropdown:hover .dropdown-content {
+ .dropdown:hover .dropdown-content {
     display: block;
-  }*/
- #f{
+  }
+   #f{
    font-size: 30px;
    color:grey;
  }
@@ -287,6 +297,10 @@ body {
     .loginform{
       margin-left: 1%;
       margin-right: 1%
+      
+    }
+    #cancel{
+      float: none;
     }
   
     .navbar a:not(:first-child), .dropdown .dropbtn {
