@@ -36,6 +36,15 @@ def about(request):
         'about.html',
     )
 
+def start_page(request):
+    context = {
+        "title":"TutorialHero"
+    }
+    return render(
+        request,
+        'start.html',
+    )
+
 def login_page(request):
     form = LoginForm(request.POST or None)
     print("User LoggedIn is")

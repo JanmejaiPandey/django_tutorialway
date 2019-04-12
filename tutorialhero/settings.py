@@ -26,7 +26,7 @@ SECRET_KEY = '#haq6&$l=%2tkcsyzbc_p+v$g^$4l=03dr8eg^4x807ajm-85x'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['tutorialhero.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -49,7 +49,7 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    # 'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
@@ -121,15 +121,15 @@ USE_TZ = True
 # import dj_database_url
 # db_from_env=dj_database_url.config(conn_max_age=500)
 # DATABASES['default'].update(db_from_env)
-if 'DATABASE_URL' in os.environ:
-    import dj_database_url
-    DATABASES = {'default': dj_database_url.config()}
+# if 'DATABASE_URL' in os.environ:
+#     import dj_database_url
+#     DATABASES = {'default': dj_database_url.config()}
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles')
 STATIC_URL = '/static/'
-STATICFILES_STORAGE='whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE='whitenoise.storage.CompressedManifestStaticFilesStorage'
 # Redirect to home URL after login (Default redirects to /accounts/profile/)
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'

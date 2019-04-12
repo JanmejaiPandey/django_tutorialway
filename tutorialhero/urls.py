@@ -18,7 +18,7 @@ from django.urls import path,include
 from app import views
 
 urlpatterns = [
-    path('',views.home,name="home"),
+    path('home/',views.home,name="home"),
     path('python3/',views.python3,name='python3'),
     path('html/',views.html,name="html"),
     path('about/',views.about,name="about"),
@@ -27,6 +27,7 @@ urlpatterns = [
     path('pandas/',views.pandas,name="pandas"),
     path('css/',views.css,name="css"),
     path('admin/', admin.site.urls),
+    path('',views.start_page,name="start"),
 ]
 #Add Django site authentication urls (for login, logout, password management)
 urlpatterns += [

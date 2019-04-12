@@ -84,6 +84,10 @@ body {
     border: 1px solid red;
     background-color: gainsboro
   }
+.start{ 
+  background-image: url('images/back5.jpg'); 
+  background-size: 100%;
+}
   .form-control{
     display: block;
     width: max-content;
