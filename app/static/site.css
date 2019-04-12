@@ -86,7 +86,7 @@ body {
   }
 .start{ 
   background-image: url('images/back5.jpg'); 
-  background-size: 100%;
+  background-size: cover;
 }
   .form-control{
     display: block;
