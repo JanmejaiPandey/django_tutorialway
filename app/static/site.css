@@ -85,7 +85,8 @@ body {
     background-color: gainsboro
   }
 .start{ 
-background-color: indianred;
+background-color: gainsboro;
+color:darkred;
 }
   .form-control{
     display: block;
