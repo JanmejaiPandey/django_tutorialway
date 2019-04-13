@@ -15,13 +15,19 @@ This site is made for the purpose of learning and teaching.
     <div style="margin-top:5%;">
 <h3 style="margin-left:12%;color:red"><u>Tutorials:</u></h3>
 
-<img src="{% static 'images\python.png'%}" align=right>
+<img class="img-fluid" src="{% static 'images\python.png'%}" align=right>
 <div style="margin-left: 12%">Python is a powerful high-level, 
 object oriented programming language created by Guido van Rossum. 
 <br>
 Python has simple easy-to-use syntax which makes writing code fun.
 </div>
-<a style="margin-left: 40%;;" href="{% url 'python3' %}"><button style="margin-bottom: 2%;"id="btnlink">python3</button></a></li>
+<center>
+    <a href="{% url 'python3' %}">
+    <button style="margin-bottom: 3%;"class="btn btn-info mb-5" id="btnlink">
+        python3
+    </button>
+    </a>
+</center>
 
 </div>
 </article>

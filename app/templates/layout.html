@@ -2,57 +2,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
-    <title>Become Zero to Hero in Coding:TutotrialHero</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" />
-    <link rel="icon" type="image/png" sizes="16x16" href="{%static 'images/favicon-16x16.png'%}"/>
-    <link rel="stylesheet" type="text/css" href="{% static 'site.css' %}" />
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
-    <script src="{% static 'jquery-3.3.1.min.js' %}"></script>
-    <script src="{% static 'script.js' %}"></script>
-     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> 
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> -->
-    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
-   
-    
+  <meta charset="utf-8">
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+  <title>Zero to Hero|TutotrialHero</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% include 'layout/icon.html' %}  
+  {% include 'layout/css.html' %}   
 </head>
 <body>
-  <div class="header">
-      <article id="m"> <a href="{% url 'home' %}" id="h"><font size=7 >TutorialHero</font></a></article>
-  </div>
-  <div class="navbar" id="myNav"> 
-   <div class="dropdown">
-   <button id="b" class="dropbtn" >
-    PYTHON
-   </button>
-   <div class="dropdown-content">
-    <a href="{% url 'python3' %}">Python3</a>
-   <br>
-    <a href="{% url 'numpy' %}">Numpy</a>
-   <br>
-    <a  href="{% url 'pandas' %}">Pandas</a>
-    </div>
-   </div>
-   <a id="b" href="{% url 'c' %}" >C</a>
-   <a id="b"  href="{% url 'html' %}">HTML</a>
- <a id="b" href="{% url 'css' %}" >CSS</a>
- <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
- {% if user.is_authenticated %}
- <a id="g" href="{% url 'logout' %}" style="float:right;">LogOut</a>
- <font size=4 style="float:right;margin-top: 1%;"> Hi {{ user.username }}!</font>
-{% else %}
-  <a id="g" href="{% url 'login' %}" style="float:right;">LogIn</a>
-  <a id="g" href="{% url 'signup' %}" style="float:right;">SignUp</a>
-{% endif %}
- 
+<div class="header">
+  <article > <a href="{% url 'home' %}" id="h"><h1>TutorialHero</h1></a></article>
 </div>
-
+{% include 'layout/navbar.html' %}
 <div id="page-container">
 <div id="content-wrap">
 {% block content %}
-<!-- <article class="oreHeader"><H2>{{title}}</H2></article> -->
+
 {% endblock %}
 </div>
 <footer id="foot">
@@ -63,5 +28,6 @@
     <a style="cursor:pointer;color:darkslategray;"href="{% url 'about' %}">About</a>
 </footer>
 </div>
+{% include 'layout/js.html' %}
 </body>
 </html>
