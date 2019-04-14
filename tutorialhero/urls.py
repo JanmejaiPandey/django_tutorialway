@@ -39,8 +39,6 @@ urlpatterns += [
     path('logout/',views.logout_page,name="logout"),
     path('signup/',views.SignUp_page,name="signup"),
 ]
-urlpatterns = urlpatterns+static(settings.MEDIA_URL,ducument_root=settings.MEDIA_ROOT)
-    
     
 
 
