@@ -13,25 +13,9 @@
 <div class="container"></div>
 <div class="row">
     
-    <div class="col-10 mx-auto">
+<div class="col-10 mx-auto">
     {% include 'layout/card.html' with instance=obj %}
-        
-      
-    
-    </div> 
-    </div>
-    <div class="row"> 
-        <div class="col-12"><hr></div>
-        {% elif forloop.counter|divisibleby:2 %}  
-        <!-- {% cycle '<h1>HelloThere</h1>' ''%}  -->
-        </div> 
-        
-        <div class="row"> 
-            <div class="col-12"><hr></div>
-    
-        {% else %}
-    </div> 
-    {% endif %} 
-<br>
+</div>
+</div>
 </font>
 {% endblock %}
