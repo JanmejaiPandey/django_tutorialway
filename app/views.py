@@ -5,7 +5,10 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login,authenticate,get_user_model,logout 
 from django.urls import reverse_lazy
 from django.views import generic
+from tutorialhero import urls
 from .forms import LoginForm,SignUpForm
+import urllib
+
 
 User =get_user_model()
 def python3(request):
@@ -17,6 +20,11 @@ def python3(request):
         'python3.html',
         context
     )
+def SearchView(request):
+     return render( 
+        request,
+        'search/search.html',
+        )
 
 def home(request):
     return render(

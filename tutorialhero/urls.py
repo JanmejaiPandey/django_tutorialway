@@ -26,6 +26,7 @@ urlpatterns = [
     path('numpy/',views.numpy,name="numpy"),
     path('pandas/',views.pandas,name="pandas"),
     path('css/',views.css,name="css"),
+    path('search/',views.SearchView,name="query"),
     path('admin/', admin.site.urls),
     path('',views.start_page,name="start"),
 ]

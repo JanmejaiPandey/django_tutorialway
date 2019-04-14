@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+{% block content %}
+{% if request.GET.q %}
+<div class="row">
+<div class="col-10 mx-auto py-3">
+    Reasults for <b>{{request.GET.q}}</b>
+</div>
+</div>
+{% else %}
+<div class="row">
+<div class="col-10 mx-auto py-3">
+   showing <b>All</b> Reasults 
+</div>
+</div>
+{% endif %}
+<div class="row">
+<div class="col-11 mx-auto">
+   <hr>
+</div>
+</div>
+<div class="row">
+<div class="col-10 mx-auto">
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Python</h5>
+    <h6 class="card-subtitle mb-2 text-muted">python3</h6>
+    <p class="card-text">python tutorial is provided in thid link</p>
+    <a href="{% url 'python3' %}" class="card-link">view</a>
+  </div>
+</div>
+</div>
+</div>
+
+{% endblock %}

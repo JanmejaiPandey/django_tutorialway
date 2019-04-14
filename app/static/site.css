@@ -11,7 +11,7 @@ body {
   }
   .navbar { 
     background-color:#f9f9f9;
-    box-shadow: 0 10px 10px -6px grey;
+    box-shadow: 0 6px 6px -7px grey;
   } 
   /* .sticky {
     position: fixed;
@@ -175,9 +175,9 @@ color:darkred;
     margin-right:8%;
     margin-bottom:3%;
     padding:1px 16px;
-    background-color:rgba(255, 250, 250, 0.932);
-    box-shadow: 0 2px 8px -2px red;
+    box-shadow: 0 2px 8px -2px grey;
     /*border-radius: 25px;*/
+    border-radius: 1.5rem;
   }
   #in{
       margin-bottom: 5%;
@@ -284,9 +284,6 @@ color:darkred;
     /* .navbar a:not(:first-child), .dropdown .dropbtn {
       display: none;
     }*/
-    #page-container{
-      margin-top: 15%;
-    }
     #f{
       font-size: 15px;
     }
