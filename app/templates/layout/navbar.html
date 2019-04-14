@@ -39,13 +39,13 @@
      <a  class="btn btn-outline-success my-2 mr-2" href="{% url 'logout' %}" style="float:right;">LogOut</a>
      <font size=4 style="float:right;"> 
       <div class="btn-group">
-  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-outline-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Hi {{ user.username }}!
   </button>
   <div class="dropdown-menu dropdown-menu-right">
-    <button class="dropdown-item" type="button">Action</button>
-    <button class="dropdown-item" type="button">Another action</button>
-    <button class="dropdown-item" type="button">Something else here</button>
+    <a href="#" class="dropdown-item" type="button">Profile</a>
+    <a href="#" class="dropdown-item" type="button">History</a>
+    <a href="#" class="dropdown-item" type="button">Help</a>
   </div>
 </div>
      </font>
