@@ -49,7 +49,7 @@ class TutorialManager(models.Manager):
 class tutorial(models.Model):
     title = models.CharField(max_length=120)
     description = models.TextField()
-    image = models.ImageField(upload_to=upload_image_path, null=True, blank=True )
+    # image = models.ImageField(upload_to=upload_image_path, null=True, blank=True )
 
     objects = TutorialManager()
 
