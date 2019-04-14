@@ -14,9 +14,11 @@
   <article > <a href="{% url 'home' %}" id="h"><h1>TutorialHero</h1></a></article>
 </div>
 {% include 'layout/navbar.html' %}
+<br>
+{% include 'layout/pagination.html' %} 
 <div id="container">
 <div id="content-wrap">
-{% include 'layout/pagination.html' %}  
+ 
 {% block content %}
 {% endblock %}
 </div>
