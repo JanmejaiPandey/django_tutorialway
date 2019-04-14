@@ -71,7 +71,7 @@ body {
     padding-right: 3%;
     display: block;
     border: 1px solid red;
-    background-color: gainsboro
+    border-radius: 1rem;
   }
 .start{ 
 background-color: gainsboro;
