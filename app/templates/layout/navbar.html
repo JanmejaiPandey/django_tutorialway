@@ -38,18 +38,16 @@
 
      <a  class="btn btn-outline-success my-2 mr-2" href="{% url 'logout' %}" style="float:right;">LogOut</a>
      <font size=4 style="float:right;"> 
-      <div class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Hi {{ user.username }}!
-          </a>
-          <div class="dropdown-menu" >
-            <a class="dropdown-item" href="#">Profile</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">History</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Settings</a>
-          </div>
-        </div>
+      <div class="btn-group">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Hi {{ user.username }}!
+  </button>
+  <div class="dropdown-menu dropdown-menu-right">
+    <button class="dropdown-item" type="button">Action</button>
+    <button class="dropdown-item" type="button">Another action</button>
+    <button class="dropdown-item" type="button">Something else here</button>
+  </div>
+</div>
      </font>
      {% else %}
      <a  class="btn btn-outline-primary mr-2" href="{% url 'signup' %}" >SignUp</a>
