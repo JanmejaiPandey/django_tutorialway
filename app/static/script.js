@@ -8,7 +8,9 @@ function myFunction() {
 }
 
 $(document).ready(function(){
-
+ $("#myBtn").click(function(){
+    $('.toast').toast('show');
+  });
   $('#navbarDropdown').click(function(){
     $('.dropdown-menu').show(10000);
   });

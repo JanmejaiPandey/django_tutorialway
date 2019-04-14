@@ -116,6 +116,10 @@ def SignUp_page(request):
         password = form.cleaned_data.get("password")
         new_user = User.objects.create_user(username, email, password)
         print(new_user)   
+        if new_user is not None:
+            return redirect("/login")       
+        else:
+            print("Error")
     return render(
         request,
         "auth/signup.html",

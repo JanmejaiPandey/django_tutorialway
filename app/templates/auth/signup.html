@@ -3,13 +3,14 @@
 {% block title %}Sign Up{% endblock %}
 
 {% block content %}
+{% url 'toast.html' %}
 <article class="loginform" >
   <h2 style="text-align:center;">Sign up</h2>
   <hr>
 <form method="POST">
         {% csrf_token %}
         {{ form }}
-        <button type="submit" style="width:30%;margin-top: 3%;margin-left: 10%;" class="form-control btn btn-success">Signup</button>
+        <button id="myBtn" type="submit" style="width:30%;margin-top: 3%;margin-left: 10%;" class="form-control btn btn-success">Signup</button>
         <a  style="width:30%;margin-top: 3%;margin-right: 10%; float: right;" class="form-control btn btn-danger" href="{% url 'home' %}">
         Cancel
         </a> 
