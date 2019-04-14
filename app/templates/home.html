@@ -15,7 +15,17 @@
     {% for obj in object_list %}
     
     <div class="col-10 mx-auto">
-    {% include 'layout/card.html' with instance=obj %}
+    
+<div class="card">
+    <a href="" >
+        <img src="{% static 'images/python.png' %}" class="card-img-top" alt="{{obj.title}} logo">
+    </a>   
+        <div class="card-body">
+          <h5 class="card-title">{{obj.title}}</h5>
+          <p class="card-text">{{obj.description|linebreaks|truncatewords:14}}</p>
+          <a href="" class="btn btn-primary">view</a>
+        </div>
+  </div>
         
     {% if forloop.counter|divisibleby:3 %}  
     

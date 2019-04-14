@@ -4,22 +4,6 @@ from django.db.models import Q
 import random
 from django.urls import reverse
 
-def get_filename_ext(filename):
-    basename = os.path.basename(filename)
-    name, ext = os.path.splitext(filename)
-    return name , ext
-
-def upload_image_path(instance , filename):
-    # print(instance)
-    # print(filename)
-    new_filename = random.randint(1,397625012)
-    name, ext = get_filename_ext(filename)
-    final_filename = '{new_filename}{ext}'.format(new_filename=new_filename,  ext=ext)
-    return "tutorial/{new_filename}/{final_filename}".format(
-            new_filename = new_filename,
-            final_filename = final_filename,
-    )
-    
 
 class TutorialQuerySet(models.query.QuerySet):
 
@@ -49,7 +33,6 @@ class TutorialManager(models.Manager):
 class tutorial(models.Model):
     title = models.CharField(max_length=120)
     description = models.TextField()
-    # image = models.ImageField(upload_to=upload_image_path, null=True, blank=True )
 
     objects = TutorialManager()
 
