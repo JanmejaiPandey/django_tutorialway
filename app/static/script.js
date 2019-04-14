@@ -8,38 +8,10 @@ function myFunction() {
 }
 
 $(document).ready(function(){
+ 
  $("#myBtn").click(function(){
     $('.toast').toast('show');
   });
-  $('#navbarDropdown').click(function(){
-    $('.dropdown-menu').show(10000);
-  });
-// window.onscroll = function() {sFunction()};
-// var navbar = document.getElementById("myNav");
-// var sticky = navbar.offsetTop; 
-// function sFunction() {
-//   if (window.pageYOffset >= sticky) {
-//     navbar.classList.add("sticky");
-//   } else {
-//     navbar.classList.remove("sticky");
-//   }
-// }
-//   $(".dropdown").click(function(){
-//     $(".dropdown-content").toggle(600);
-//   });
-//   $(".form-control").click(function(){
-//       $(this).show(10000);
-//   });
-//   $(".dropdown").mouseleave(function(){
-//     $(".dropdown-content").hide(600);
-//   });
-//   $('.navbar li a').click(function(){
-//     $(this).parent().addClass('active');
-//   });
-//   updateImageSize();
-//     $(window).resize(function() {
-//         updateImageSize();
-//     });
     
 });
 var favicon_images = [
