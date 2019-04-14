@@ -36,7 +36,20 @@
        <a href="{% url 'query' %}"><button class="btn btn-outline-danger my-2 mr-2">Search</button></a>
       {% if user.is_authenticated %}
      <a  class="btn btn-outline-success my-2 mr-2" href="{% url 'logout' %}" style="float:right;">LogOut</a>
-     <font size=4 style="float:right;"> Hi {{ user.username }}!</font>
+     <font size=4 style="float:right;"> 
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Hi {{ user.username }}!
+          </a>
+          <div class="dropdown-menu" >
+            <a class="dropdown-item" href="{% url 'python3' %}">Python3</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="{% url 'numpy' %}">Numpy</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="{% url 'pandas' %}">Pandas</a>
+          </div>
+        </li>
+     </font>
      {% else %}
      <a  class="btn btn-outline-primary mr-2" href="{% url 'signup' %}" >SignUp</a>
      <a  class="btn btn-outline-success " role="button" href="{% url 'login' %}" >LogIn</a>
