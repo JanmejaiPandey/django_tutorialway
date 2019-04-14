@@ -129,8 +129,6 @@ if 'DATABASE_URL' in os.environ:
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles')
 STATIC_URL = '/static/'
-MEDIA_ROOT=os.path.join(BASE_DIR,'media')
-MEDIA_URL='/media/'
 STATICFILES_STORAGE='whitenoise.storage.CompressedManifestStaticFilesStorage'
 #Redirect to home URL after login (Default redirects to /accounts/profile/)
 LOGIN_REDIRECT_URL = 'home'
