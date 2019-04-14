@@ -12,28 +12,18 @@
 
 <div class="container"></div>
 <div class="row">
-    {% for obj in object_list %}
     
     <div class="col-10 mx-auto">
-    
-<div class="card">
-    <a href="" >
-        <img src="{% static 'images/python.png' %}" class="card-img-top" alt="{{obj.title}} logo">
-    </a>   
-        <div class="card-body">
-          <h5 class="card-title">{{obj.title}}</h5>
-          <p class="card-text">{{obj.description|linebreaks|truncatewords:14}}</p>
-          <a href="" class="btn btn-primary">view</a>
-        </div>
-  </div>
+    {% include 'layout/card.html' with instance=obj %}
         
-    {% if forloop.counter|divisibleby:3 %}  
+      
     
     </div> 
     </div>
     <div class="row"> 
         <div class="col-12"><hr></div>
         {% elif forloop.counter|divisibleby:2 %}  
+        <!-- {% cycle '<h1>HelloThere</h1>' ''%}  -->
         </div> 
         
         <div class="row"> 
@@ -42,7 +32,6 @@
         {% else %}
     </div> 
     {% endif %} 
-    {% endfor %}
 <br>
 </font>
 {% endblock %}
