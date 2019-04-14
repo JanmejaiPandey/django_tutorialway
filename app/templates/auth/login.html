@@ -2,15 +2,17 @@
 {% load staticfiles %}
 {% block content %}
 <article class="loginform" >
-<form method="POST" class="form-control">
-<h2 style="text-align:center;">Login</h2>
-<hr>
-{% csrf_token %}
-{{ form }}
- <button style="width:30%;margin-top: 3%;margin-left: 10%" type="submit" class="form-control btn btn-success" >Login</button>
- <a  style="width:30%;margin-top: 3%;margin-right: 10%; float: right;" class="btn btn-danger" href="{% url 'home' %}">Cancel</a>
- <hr>
- By Submitting, you are accepting the <a href="">terms and conditions</a>
-</form>
-</article>
+  <h2 style="text-align:center;">Login</h2>
+  <hr>
+<form method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit" style="width:30%;margin-top: 3%;margin-left: 10%;" class="form-control btn btn-success">login</button>
+        <a  style="width:30%;margin-top: 3%;margin-right: 10%; float: right;" class="form-control btn btn-danger" href="{% url 'home' %}">
+        Cancel
+        </a> 
+        <hr>
+ By Submitting, you are accepting the <a href="">terms and conditions</a>      
+    </form>
+  </article>
 {% endblock %}
