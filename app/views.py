@@ -116,8 +116,6 @@ def SignUp_page(request):
         password = form.cleaned_data.get("password")
         new_user = User.objects.create_user(username, email, password)
         print(new_user)          
-        else:
-            print("Error")
     return render(
         request,
         "auth/signup.html",
