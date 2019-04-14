@@ -1,7 +1,20 @@
 {% load staticfiles %}
+<div class="card">
+    {% if instance.image %}
+    <a href="" >
+        <img src="{% static 'images/python.png' %}" class="card-img-top" alt="{{instance.title}} logo">
+    </a>
+    {% endif %}    
+        <div class="card-body">
+          <h5 class="card-title">{{instance.title}}</h5>
+          <p class="card-text">{{instance.description|linebreaks|truncatewords:14}}</p>
+          <a href="" class="btn btn-primary">view</a>
+        </div>
+      </div>
+<!-- <div class="container">
 <div class="row mb-5">
-<div class="col-3 mx-auto order-1" style="background-image:url('images/back1.jpg')">
-<div class="card" style="width: 18rem;">
+<div class="col-4 ml-1 order-4">
+<div class="card" style="width: 25rem;">
   <img src="{% static 'images\python.png'%}" class="card-img-top" alt="python3">
   <div class="card-body">
     <h5 class="card-title">Python3</h5>
@@ -10,56 +23,10 @@
   </div>
 </div>
 </div>
-<div class="col-3 mx-auto order-2" style="background-image:url('images/back1.jpg')">
-<div class="card" style="width: 18rem;">
-  <img src="{% static 'images\python.png'%}" class="card-img-top" alt="python3">
-  <div class="card-body">
-    <h5 class="card-title">Python3</h5>
-    <p class="card-text">Learn about the most trending programming language.</p>
-    <center><a href="{% url 'python3' %}" class="btn btn-primary">Learn</a></center>
-  </div>
+<div class="col-6 mr-1 order-2">
+Python is a powerful high-level, 
+object oriented programming language created by Guido van Rossum. 
+<br>
+Python has simple easy-to-use syntax which makes writing code fun.
 </div>
-</div>
-<div class="col-3 mx-auto order-3" style="background-image:url('images/back1.jpg')">
-<div class="card" style="width: 18rem;">
-  <img src="{% static 'images\python.png'%}" class="card-img-top" alt="python3">
-  <div class="card-body">
-    <h5 class="card-title">Python3</h5>
-    <p class="card-text">Learn about the most trending programming language.</p>
-    <center><a href="{% url 'python3' %}" class="btn btn-primary">Learn</a></center>
-  </div>
-</div>
-</div>
-</div>
-<div class="row mb-5">
-<div class="col-3 mx-auto order-1" style="background-image:url('images/back1.jpg')">
-<div class="card" style="width: 18rem;">
-  <img src="{% static 'images\python.png'%}" class="card-img-top" alt="python3">
-  <div class="card-body">
-    <h5 class="card-title">Python3</h5>
-    <p class="card-text">Learn about the most trending programming language.</p>
-    <center><a href="{% url 'python3' %}" class="btn btn-primary">Learn</a></center>
-  </div>
-</div>
-</div>
-<div class="col-3 mx-auto order-2" style="background-image:url('images/back1.jpg')">
-<div class="card" style="width: 18rem;">
-  <img src="{% static 'images\python.png'%}" class="card-img-top" alt="python3">
-  <div class="card-body">
-    <h5 class="card-title">Python3</h5>
-    <p class="card-text">Learn about the most trending programming language.</p>
-    <center><a href="{% url 'python3' %}" class="btn btn-primary">Learn</a></center>
-  </div>
-</div>
-</div>
-<div class="col-3 mx-auto order-3" style="background-image:url('images/back1.jpg')">
-<div class="card" style="width: 18rem;">
-  <img src="{% static 'images\python.png'%}" class="card-img-top" alt="python3">
-  <div class="card-body">
-    <h5 class="card-title">Python3</h5>
-    <p class="card-text">Learn about the most trending programming language.</p>
-    <center><a href="{% url 'python3' %}" class="btn btn-primary">Learn</a></center>
-  </div>
-</div>
-</div>
-</div>
+</div> -->

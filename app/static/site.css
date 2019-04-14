@@ -273,8 +273,14 @@ color:darkred;
   border:1px solid red;
   margin-bottom: 5%;
 }
+  .card{
+      width: 30rem;
+    }
   @media screen and (max-width: 600px) {
     
+    .card{
+      width: 15rem;
+    }
 
     .loginform{
       margin-left: 10%;
