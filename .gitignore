@@ -6,6 +6,11 @@ __pycache__/
 # C extensions
 *.so
 
+#django relate
+tutorialhero/settings/local.py
+*.sublime-project
+*.vscode
+
 # Distribution / packaging
 .Python
 build/
