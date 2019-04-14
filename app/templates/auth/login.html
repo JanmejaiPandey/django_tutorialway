@@ -1,10 +1,10 @@
 {% extends "layout.html" %}
 {% load staticfiles %}
 {% block content %}
-<article class="loginform" >
+<article  >
   <h2 style="text-align:center;">Login</h2>
   <hr>
-<form method="POST">
+<form method="POST" >
         {% csrf_token %}
         {{ form }}
         <button type="submit" style="width:30%;margin-top: 3%;margin-left: 10%;" class="form-control btn btn-success">login</button>
