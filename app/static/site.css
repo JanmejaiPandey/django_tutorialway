@@ -279,7 +279,7 @@ color:darkred;
   @media screen and (max-width: 600px) {
     
     .card{
-      width: 15rem;
+      width: 17rem;
     }
 
     .loginform{
