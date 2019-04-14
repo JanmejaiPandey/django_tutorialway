@@ -33,6 +33,10 @@ urlpatterns = [
     path('home/',views.TutorialList.as_view(),name="home"),
     path('',views.start_page,name="start"),
 ]
+urlpatterns += [
+      path('python3-first-step/',views.pyfirst,name="pyfirst"),
+]
+
 #Add Django site authentication urls (for login, logout, password management)
 urlpatterns += [
     path('login/',views.login_page,name="login"),

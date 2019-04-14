@@ -122,6 +122,12 @@ def SignUp_page(request):
         context
         )
 
+def pyfirst(request):
+    return render(
+        request,
+        'content/python3/first.html',
+    )
+
 def c(request):
     return render(
         request,
