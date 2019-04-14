@@ -1,10 +1,8 @@
 {% load staticfiles %}
 <div class="card">
-    {% if instance.image %}
     <a href="" >
         <img src="{% static 'images/python.png' %}" class="card-img-top" alt="{{instance.title}} logo">
-    </a>
-    {% endif %}    
+    </a>   
         <div class="card-body">
           <h5 class="card-title">{{instance.title}}</h5>
           <p class="card-text">{{instance.description|linebreaks|truncatewords:14}}</p>

@@ -9,51 +9,21 @@
 <hr >
 </div>
 </div>
-<!-- <article id="ar"> -->
 
-<!-- <h1 style="color:red">
-Welcome
-</h1>
-This site contains tutorial that are provided by Janmejai Pandey,Founder of TutorialHero and its developer.
-<br>
-This site is made for the purpose of learning and teaching. 
-</article>
-
-<article id="av">
-    <div style="margin-top:5%;">
-
-
-<img class="img-fluid" src="{% static 'images\python.png'%}" align=right>
-<div style="margin-left: 12%">Python is a powerful high-level, 
-object oriented programming language created by Guido van Rossum. 
-<br>
-Python has simple easy-to-use syntax which makes writing code fun.
-</div>
-<center>
-    <a href="{% url 'python3' %}">
-    <button style="margin-bottom: 3%;"class="btn btn-info mb-5" id="btnlink">
-        python3
-    </button>
-    </a>
-</center>
-
-</div>
-</article> -->
 <div class="container"></div>
 <div class="row">
     {% for obj in object_list %}
     
     <div class="col-10 mx-auto">
-       {% include 'layout/card.html' with instance=obj %}
+    {% include 'layout/card.html' with instance=obj %}
         
     {% if forloop.counter|divisibleby:3 %}  
-    <!-- {% cycle '<h1>HelloThere</h1>' ''%}  -->
+    
     </div> 
     </div>
     <div class="row"> 
         <div class="col-12"><hr></div>
         {% elif forloop.counter|divisibleby:2 %}  
-        <!-- {% cycle '<h1>HelloThere</h1>' ''%}  -->
         </div> 
         
         <div class="row"> 
