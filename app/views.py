@@ -30,9 +30,6 @@ def tuorial_list_view(request):
         context
         )
 
-
-
-
 User =get_user_model()
 def python3(request):
     context = {
@@ -72,23 +69,23 @@ def start_page(request):
 
 def login_page(request):
     form = LoginForm(request.POST or None)
-    print("User LoggedIn is")
-    print(request.user.is_authenticated)
+    # print("User LoggedIn is")
+    # print(request.user.is_authenticated)
     context = {
         "form":form
     }
     if form.is_valid():
-        print(form.cleaned_data)
+        # print(form.cleaned_data)
         username = form.cleaned_data.get("username")
         password = form.cleaned_data.get("password")
         #print(request.user.is_authenticated)
         user = authenticate(request, username=username, password=password)
-        print(user)
+        # print(user)
         
         if user is not None:
             #print(request.user.is_authenticated)
             login(request, user)
-            print(request.user.is_authenticated)
+            # print(request.user.is_authenticated)
             #context['form'] = LoginForm()
             return redirect("/")       
         else:
