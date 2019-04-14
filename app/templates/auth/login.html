@@ -2,7 +2,7 @@
 {% load staticfiles %}
 {% block content %}
 <form class="loginform" >
-<form method="POST">
+<form method="POST" class="form-control">
 <h2 style="text-align:center;">Login</h2>
 <hr>
 {% csrf_token %}
@@ -11,5 +11,6 @@
  <a  style="width:30%;margin-top: 3%;margin-right: 10%; float: right;" class="btn btn-danger" href="{% url 'home' %}">Cancel</a>
  <hr>
  By Submitting, you are accepting the <a href="">terms and conditions</a>
+</form>
 </form>
 {% endblock %}
