@@ -36,9 +36,6 @@ urlpatterns = [
 urlpatterns += [
       path('python3-first-step/',views.pyfirst,name="pyfirst"),
 ]
-if settings.DEBUG:
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 #Add Django site authentication urls (for login, logout, password management)
 urlpatterns += [
     path('login/',views.login_page,name="login"),
