@@ -30,7 +30,7 @@ urlpatterns = [
     path('css/',views.css,name="css"),
     path('search/',views.SearchView,name="query"),
     path('admin/', admin.site.urls),
-    path('home/',views.TutorialList.as_view(),name="home"),
+    path('home/',views.ProductListView.as_view(),name="home"),
     path('',views.start_page,name="start"),
 ]
 urlpatterns += [
@@ -43,7 +43,9 @@ urlpatterns += [
     path('signup/',views.SignUp_page,name="signup"),
 ]
     
-
+if settings.DEBUG:
+    urlpatterns = urlpatterns + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns = urlpatterns + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
 

@@ -7,20 +7,36 @@ from django.contrib.auth import login,authenticate,get_user_model,logout
 from django.urls import reverse_lazy
 from django.views import generic
 from tutorialhero import urls
-from .models import tutorial
 from .forms import LoginForm,SignUpForm
 import urllib
+from django.views.generic import ListView,DetailView
+from django.shortcuts import render, get_object_or_404
+from django.http import request
+from .models import product
 
-class TutorialList(ListView):
-    queryset = tutorial.objects.all()
+class ProductFeaturedListView(ListView):
     template_name = "home.html"
 
     def get_queryset(self, *args, **kwargs):
         request = self.request
-        return tutorial.objects.all()
+        return product.objects.all().featured ()
 
-def tuorial_list_view(request):
-    queryset = tutorial.objects.all()
+
+class ProductListView(ListView):
+    queryset = product.objects.all()
+    template_name = "home.html"
+    
+    # def get_context_data(self, *args, **kwargs ):
+    #     context = super(ProductListView, self).get_context_data(*args, **kwargs)
+    #     print(context)
+    #     return context
+
+    def get_queryset(self, *args, **kwargs):
+        request = self.request
+        return product.objects.all()
+
+def product_list_view(request):
+    queryset = product.objects.all()
     context = {
         'object_list':queryset,
     }

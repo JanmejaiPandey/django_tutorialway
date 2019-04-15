@@ -1,15 +1,12 @@
-{% load staticfiles %}
-<div class="card">
-    <a href="" >
-        <img src="{% static 'images/python.png' %}" class="card-img-top" alt="python3 logo">
-    </a>   
+<div class="card" style="width: 18rem;">
+    {% if instance.image %}
+    <a href="{{instance.get_absolute_url}}" >
+        <img src="{{instance.image.url}}" class="card-img-top" alt="{{instance.title}} logo">
+    </a>
+    {% endif %}    
         <div class="card-body">
-          <h5 class="card-title">{{instance.tiitle}}</h5>
-          <p class="card-text">Learn about the most trending programming language.Python is a powerful high-level, 
-			object oriented programming language created by Guido van Rossum. 
-			<br>
-			Python has simple easy-to-use syntax which makes writing code fun.
-		  </p>
-       <center><a href="{% url 'python3' %}" class="btn btn-primary" style="width:55%">Start</a></center>
-    </div>
-</div>
+          <h5 class="card-title">{{instance.title}}</h5>
+          <p class="card-text">{{instance.description|linebreaks|truncatewords:14}}</p>
+          <a href="{{instance.get_absolute_url}}" class="btn btn-primary">view</a>
+        </div>
+      </div>

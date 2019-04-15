@@ -11,12 +11,34 @@
 <hr >
 </div>
 </div>
+<div class="row">
+    {% for obj in object_list %}
+    
+    <div class="col">
+        {{forloop.counter}}
+       {% include 'layout/card.html' with instance=obj %}
+        
+    {% if forloop.counter|divisibleby:3 %}  
+    <!-- {% cycle '<h1>HelloThere</h1>' ''%}  -->
+    </div> 
+    </div>
+    <div class="row"> 
+        <div class="col-12"><hr></div>
+        {% elif forloop.counter|divisibleby:2 %}  
+        <!-- {% cycle '<h1>HelloThere</h1>' ''%}  -->
+        </div> 
+        </div>
+        <div class="row"> 
+            <div class="col-12"><hr></div>
+    
+        {% else %}
+    </div> 
+    {% endif %} 
+    {% endfor %}
 
-<div class="row mb-5">
-<div class="col-10 mx-auto">
-    {% include 'layout/card.html' with instance=obj %}
 </div>
 </div>
+
 </font>
 </div>
 {% endblock %}
