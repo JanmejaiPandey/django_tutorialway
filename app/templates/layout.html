@@ -14,11 +14,14 @@
   <article > <a href="{% url 'home' %}" id="h"><h1>TutorialHero</h1></a></article>
 </div>
 {% include 'layout/navbar.html' %}
+
 <div id="page-container">
 <div id="content-wrap">
+<div class="container">
 {% block content %}
 
 {% endblock %}
+</div>
 </div>
 <footer id="foot">
     &copy;-TutorialHero

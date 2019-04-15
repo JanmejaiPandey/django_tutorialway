@@ -130,6 +130,9 @@ color:darkred;
   margin-right: 5%;
   width:30%;
   }
+  code{
+    background-color: black;color:white;border-radius: 0.7rem;
+  }
   #av{
     position: relative;
     margin-left: 0;
@@ -141,8 +144,8 @@ color:darkred;
     background-color: lightgray;
   }
    #f{
-   font-size: 30px;
-   color:grey;
+   font-size: 5px;
+   color:darkgrey;
  }
 #btnlink{
   border: none;
@@ -203,7 +206,6 @@ color:darkred;
     .card{
       width: 17rem;
     }
-
     .loginform{
       margin-left: 10%;
       margin-right: 1%;
@@ -212,6 +214,7 @@ color:darkred;
     /* .navbar a:not(:first-child), .dropdown .dropbtn {
       display: none;
     }*/
+
     #f{
       font-size: 15px;
     }
