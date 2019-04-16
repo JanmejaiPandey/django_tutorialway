@@ -6,7 +6,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current) Menu</span></a>
         </li>
         
         <li class="nav-item dropdown">
@@ -36,16 +36,19 @@
        <a href="{% url 'query' %}"><button class="btn btn-outline-danger my-2 mr-2">Search</button></a>
       {% if user.is_authenticated %}
 
-     <a  class="btn btn-outline-success my-2 mr-2" href="{% url 'logout' %}" style="float:right;">LogOut</a>
+    
      <font size=4 style="float:right;"> 
       <div class="btn-group">
-  <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-outline-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Hi {{ user.username }}!
   </button>
   <div class="dropdown-menu dropdown-menu-right">
     <a href="#" class="dropdown-item" >Profile</a>
+    <a href="#" class="dropdown-item" >Notification</a>
     <a href="#" class="dropdown-item" >History</a>
+    <hr>
     <a href="#" class="dropdown-item" >Help</a>
+    <a class="dropdown-item" href="{% url 'logout' %}" >LogOut</a>
   </div>
 </div>
      </font>

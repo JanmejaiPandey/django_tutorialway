@@ -74,6 +74,17 @@ def about(request):
         'about.html',
     )
 
+def variable(request):
+    return render(
+        request,
+        'dictionary/variable.html',
+    )
+def dictionary(request):
+    return render(
+        request,
+        'dictionary/dictionary.html',
+    )
+
 def start_page(request):
     context = {
         "title":"TutorialHero"
