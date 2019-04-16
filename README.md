@@ -1,1 +1,1 @@
-# django_tutorialhero
+# django_tutorialway
