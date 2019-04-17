@@ -108,6 +108,7 @@ body {
     position: absolute;
     bottom: 0;
     width: 100%;  
+    z-index: 1000;
     background-color: #f5f5f5;
     }
   .loginform{
@@ -159,12 +160,12 @@ color:darkred;
     font: 400 13.3333px Arial;
 }
   #ar{
-    margin-left:8%;
-    margin-right:8%;
-    margin-bottom:3%;
+    margin-left:0%;
+    margin-right:0%;
+    margin-bottom:1%;
     padding:1px 16px;
     box-shadow: 0 2px 8px -2px grey;
-    border-radius: 1.5rem;
+    border-radius: 0.1rem;
   }
   #in{
       margin-bottom: 5%;
@@ -232,6 +233,11 @@ color:darkred;
   box-shadow: 0 2px 8px -3px black;
   margin: 4px 2px;
   cursor: pointer;
+}
+#perc{
+  background-color: whitesmoke;
+  width: max-content;
+  z-index: 0;
 }
 #btn1:hover{
   box-shadow: 0 3px 8px 0px darkgreen;
