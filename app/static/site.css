@@ -273,6 +273,9 @@ color:darkred;
   font-size: 15px;
 }
   @media screen and (max-width: 800px) {
+    .stick-container{
+      display:none;
+    }
     
     .card{
    width: 12rem;
