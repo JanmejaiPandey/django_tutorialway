@@ -13,7 +13,7 @@ $(function(){
   var scrolled_val = $(document).scrollTop();
   var percent_initial = ((w+scrolled_val)/d)*100; 
   elem.style.width = percent_initial +'%'; 
-  $("#perc").html("PageRead:<br>"+percent_initial+"%");
+  $("#perc").html(Math.round(percent_initial)+"%-Completed");
  
   $(window).scroll( function() { 
     
@@ -22,7 +22,7 @@ $(function(){
     var percent = (sum/d)*100;
     if(percent <= 100)
     {
-    $("#perc").html("PageRead:<br>"+percent+"%");
+    $("#perc").html(Math.round(percent)+"%-Completed");
     }
     elem.style.width = percent +'%';
     });
