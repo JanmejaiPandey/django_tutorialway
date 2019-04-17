@@ -43,7 +43,6 @@ body {
 
 .sidebar {
   position: fixed;
-  top: 0;
   bottom: 0;
   left: 0;
   z-index: 100; /* Behind the navbar */
@@ -53,9 +52,8 @@ body {
 
 .sidebar-sticky {
   position: -webkit-sticky;
-  position: sticky;
-  top: 48px; /* Height of navbar */
-  height: calc(100vh - 48px);
+  position: sticky; /* Height of navbar */
+  height: 450px;
   padding-top: .5rem;
   overflow-x: hidden;
   overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
@@ -69,6 +67,10 @@ body {
 .sidebar .nav-link .feather {
   margin-right: 4px;
   color: #999;
+}
+
+.act {
+ border: 1px solid black;
 }
 
 .sidebar .nav-link.active {
