@@ -30,7 +30,6 @@ urlpatterns += [
 #for dictionary
 urlpatterns += [
    path('dictionary/',views.dictionary,name="dictionary"),
-   path('dictionary/variable/',views.variable,name="variable")
 ]
 
 if settings.DEBUG:

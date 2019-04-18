@@ -118,12 +118,11 @@ USE_L10N = True
 USE_TZ = True
 
 #heroku
-# import dj_database_url
-# db_from_env=dj_database_url.config(conn_max_age=500)
-# # DATABASES['default'].update(db_from_env)
-if 'DATABASE_URL' in os.environ:
-    import dj_database_url
-    DATABASES = {'default': dj_database_url.config()}
+import dj_database_url
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
+DATABASES['default']['CONN_MAX_AGE'] = 500
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/

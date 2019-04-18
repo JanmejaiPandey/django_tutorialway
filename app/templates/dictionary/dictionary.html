@@ -1,18 +1,32 @@
 {% extends 'layout.html' %}
 {% block content %}
-<div class="container" id="page"></div>
-<div class="row">
-  <div class="col-4 mx-auto">
-
+<div class="container-fluid" id="page">
+<div class="row d-flex">
+<div class="order-1 order-md-1 col-12 col-md-2 border mt-3 py-3 bg-light">
+<div>
+<div expand="md">
+<div class="false">
+  <ul class="mb-4 list-group">
+    <h4>Modules</h4>
+   <a class="list-group-item px-2" href="#variable">variable</a>
+   <a class="list-group-item px-2" href="#datatype">datatype</a>
+  </ul>
 </div>
-<div class="col-8 mx-auto">
-<div class="jumbotron jumbotron-fluid">
+</div>
+</div>
+</div>
+<div class="order-2 order-md-2 col-12 col-md-10 min-height min-page-height py-3">
+<div class="jumbotron">
   <div class="container">
-    <h1 >Fluid jumbotron</h1>
-    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-  </div>
+    <h1 >Dictionary</h1>
+    <p class="lead">This is a dictionary that contains definition to the technical words used in tutorial.</p>
+</div>
+</div>
+{% include 'dictionary/variable.html' %}
+<hr >
+{% include 'dictionary/datatype.html' %}
 </div>
 </div>
 </div>
-</div>
+
 {% endblock %}

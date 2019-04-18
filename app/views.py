@@ -73,12 +73,6 @@ def about(request):
         request,
         'about.html',
     )
-
-def variable(request):
-    return render(
-        request,
-        'dictionary/variable.html',
-    )
 def dictionary(request):
     return render(
         request,
