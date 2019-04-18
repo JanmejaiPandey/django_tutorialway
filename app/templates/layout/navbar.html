@@ -9,7 +9,7 @@ margin-bottom: 10px;">
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current) Menu</span></a>
+          <a class="nav-link" href="{% url 'home' %}"><i class="fa fa-home"> Home</i><span class="sr-only">(current) Menu</span></a>
         </li>
         
         <li class="nav-item dropdown">
@@ -34,18 +34,22 @@ margin-bottom: 10px;">
             <a class="nav-link" href="{% url 'css' %}" >Css</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{% url 'dictionary' %}" >Dictionary</a>
+            <a class="nav-link" target="_blank"href="{% url 'dictionary' %}" >Dictionary</a>
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
-        <input method="GET" action="{% url 'query' %}" value="{{request.GET.q}}" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-       <a href="{% url 'query' %}"><button class="btn btn-outline-danger my-2 mr-2">Search</button></a>
-      {% if user.is_authenticated %}
+      <div class="input-group">
+      <input method="GET" action="{% url 'query' %}" value="{{request.GET.q}}" class="form-control" type="search" placeholder="Search" aria-label="Search">
+      <div class="input-group-append">
+      <a href="{% url 'query' %}"><button class="btn btn-outline-danger mr-2"><i class="fa fa-search"></i></button></a>
+      </div>
+      </div>
+        {% if user.is_authenticated %}
 
     
      <font size=4 style="float:right;"> 
       <div class="btn-group">
-  <button type="button" class="btn btn-outline-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Hi {{ user.username }}!
   </button>
   <div class="dropdown-menu dropdown-menu-right">

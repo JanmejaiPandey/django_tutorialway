@@ -5,21 +5,36 @@
 <div class="order-1 order-md-1 col-12 col-md-2 border mt-3 py-3 bg-light">
 <div>
 <div expand="md">
-<div class="false">
-  <ul class="mb-4 list-group">
-    <h4>Modules</h4>
-   <a class="list-group-item px-2" href="#variable">variable</a>
-   <a class="list-group-item px-2" href="#datatype">datatype</a>
-  </ul>
+<ul class="mb-4 list-group">
+<form method="POST">
+  {% csrf_token %}
+  <h4>Search</h4>
+  <div class="input-group mb-3">
+  <input type="text" class="form-control" action="{% url 'query' %}" value="{{request.GET.q}}"  placeholder="Search">
+  <div class="input-group-append">
+      <button class="btn btn-outline-primary" type="submit" >
+          <i class="fa fa-search"></i>
+      </button>
+  </div>
 </div>
+</form> 
+</ul>
+<hr>
+<ul class="mb-4 list-group"> 
+  <h4>Modules</h4>
+  <a class="list-group-item px-2 btn btn-outline-success"  href="#variable">variable</a>
+  <a class="list-group-item px-2 btn btn-outline-success"  href="#datatype">datatype</a>
+</ul>
 </div>
 </div>
 </div>
 <div class="order-2 order-md-2 col-12 col-md-10 min-height min-page-height py-3">
 <div class="jumbotron">
-  <div class="container">
-    <h1 >Dictionary</h1>
-    <p class="lead">This is a dictionary that contains definition to the technical words used in tutorial.</p>
+<div class="container">
+  <h1 >Dictionary</h1>
+  <p class="lead">
+    This is a dictionary that contains definition to the technical words used in tutorial.
+  </p>
 </div>
 </div>
 {% include 'dictionary/variable.html' %}
