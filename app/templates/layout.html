@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
-  <title>Way to Success|Tutorialway</title>
+  <title>Way to Success |Tutorialway</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% include 'layout/icon.html' %}  
   {% include 'layout/css.html' %}   
@@ -78,7 +78,17 @@
 </head>
 <body>
 <div class="header">
-  <article > <a href="{% url 'home' %}" id="h"><img src="{% static 'images/logot.png' %}" style="width:20%"></a></article>
+  <article >
+     <a href="{% url 'home' %}" id="h">
+       <img src="{% static 'images/logot.png' %}" style="width:20%">
+     </a>
+     <br>
+     <i style="margin-left:3%;">
+       <b>
+    way to success
+  </b>
+  </i>
+  </article>
 </div>
 {% include 'layout/navbar.html' %}
 
