@@ -8,97 +8,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% include 'layout/icon.html' %}  
   {% include 'layout/css.html' %}   
-  <style>
-    .stick-container
-  {
-    /*background-color: #333;*/
-    padding: 0px;
-    margin: 0px;
-    position: fixed;
-    top:200px;
-    z-index: 1
-  }
-  .stick li
-  {
-    list-style-type: none;
-    color: #000000;
-    height: 43px;
-    padding: 0px;
-    margin: 0px 1px 0px 0px;
-    -webkit-transition:all 0.25s ease-out;
-    -moz-transition:all 0.25s ease-out;
-    -o-transition:all 0.25s ease-out;
-    transition:all 0.25s ease-out;
-    cursor: pointer;
-    filter: white(100%);
-              /*  filter: ; */
-    -webkit-filter: white(100%);
-
-  }
-   .stick li img:hover
-   {
-    width: 40px;
-    height: 40px;
-  } 
-  .stick li p{
-    padding: 0px;
-    margin: 0px;
-    text-transform: uppercase;
-    line-height: 43px;
-  }
-</style>
-
- <div class="stick-container">
-    <ul class="stick">
-      <li>
-        
-        <a href="#" target="_blank">
-          <img width="32" height="32" title="Facebook" src="https://onlinecourses.nptel.ac.in/noc18_bt01/assets/img/fb1.png">
-        </a>
-      </li>
-      <li>
-          <a href="#" target="_blank">
-        <img width="32" height="32" title="Twitter" src="https://onlinecourses.nptel.ac.in/noc18_bt01/assets/img/tw1.png">
-        </a>
-      </li>
-      <li>
-          <a href="#" target="_blank">
-        <img width="32" height="32" title="Youtube" src="https://onlinecourses.nptel.ac.in/noc18_bt01/assets/img/yt.png">
-        </a>
-      </li>
-      <li>
-          <a href="#" target="_blank">
-        <img width="32" height="32" title="Linkedin" src="https://onlinecourses.nptel.ac.in/noc18_bt01/assets/img/li1.png">
-        </a>
-      </li>
-    </ul>
-  </div>
-
-
+  {% include 'social/links.html' %}
 </head>
 <body>
 <div class="header">
   <article >
      <a href="{% url 'home' %}" id="h">
-       <img src="{% static 'images/logot.png' %}" style="width:20%">
+       <img src="{% static 'images/logot.png' %}" id="logot" >
      </a>
      <br>
      <i style="margin-left:3%;">
-       <b>
     way to success
-  </b>
-  </i>
+     </i>
   </article>
 </div>
 {% include 'layout/navbar.html' %}
-
 <div id="page-container">
 <div id="content-container">
 <!-- <div class="container-fluid">
   {% include 'layout/sidebar.html' %}
   <div class="col"> -->
 <div class="container" >
-
 {% block content %}
 
 {% endblock %}

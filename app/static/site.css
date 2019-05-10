@@ -316,11 +316,16 @@ color:darkred;
   width: 25rem;
   font-size: 15px;
 }
+#logot{
+  width:20%
+}
   @media screen and (max-width: 800px) {
     .stick-container{
       display:none;
     }
-    
+    #logot{
+      width:50%
+    }
     .card{
    width: 12rem;
    font-size: 12px;
